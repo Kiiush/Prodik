@@ -22,12 +22,6 @@ void menuPrincipal(void) {
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
-    printf("///             Universidade Federal do Rio Grande do Norte                 ///\n");
-    printf("///                 Centro de Ensino Superior do Serido                     ///\n");
-    printf("///               Departamento de Computacao e Tecnologia                   ///\n");
-    printf("///                  Disciplina DCT1106 -- Programacao                      ///\n");
-    printf("///                  Projeto Sistema de Gestao Escolar                      ///\n");
-    printf("///                Developed by   @cayodts   - Jan, 2021                    ///\n");
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
