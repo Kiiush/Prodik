@@ -32,7 +32,5 @@ void menuPrincipal(void) {
     printf("///  e desafios para treinar seus reflexos e habilidades de digitacao.      ///\n");
     printf("///                                                                         ///\n");
     printf("///  Seja para treinar ou apenas se divertir, Prodik podera te ajudar       ///\n");
-    printf("///                                                                         ///\n");
-    printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
 }
