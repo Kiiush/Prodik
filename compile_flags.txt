@@ -1,0 +1,9 @@
+-IC:\MinGW\lib\gcc\mingw32\4.9.2\include\c++
+-IC:\MinGW\lib\gcc\mingw32\4.9.2\include\c++\mingw32
+-IC:\MinGW\lib\gcc\mingw32\4.9.2\include\c++\backward
+-IC:\MinGW\lib\gcc\mingw32\4.9.2\include
+-IC:\MinGW\include
+-IC:\MinGW\lib\gcc\mingw32\4.9.2\include-fixed
+-IC:\Users\MEUS DOCUMENTOS\Documents\prodik teste\prodikteste
+-target
+i686-pc-windows-gnu
