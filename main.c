@@ -4,12 +4,14 @@ void menuSobre(void);
 void menuPrincipal(void);
 void menuConfig(void);
 void menuConta(void);
+void menuReset(void);
 
 int main(void) {
 	menuPrincipal();
 	menuSobre();
 	menuConfig();
 	menuConta();
+	menuReset();
     return 0;
 
 }
@@ -81,6 +83,26 @@ void menuConta (void) {
     printf("///                                                               ///\n");
     printf("///                       1 - Criar Conta                         ///\n");
     printf("///                       2 - Entrar em conta                     ///\n");
+    printf("///                                                               ///\n");
+    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                                                               ///\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+}
+
+//menu de resetar os dados
+void menuReset (void) {
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                               ///\n");
+    printf("///                      *******************                      ///\n");
+    printf("///                      ** Configuracoes **                      ///\n");
+    printf("///                      *******************                      ///\n");
+    printf("///                                                               ///\n");
+    printf("///       Tem certeza que deseja resetar os dados da conta?       ///\n");
+    printf("///                                                               ///\n");
+    printf("///                 (Sim)                   (Nao)                 ///\n");
+    printf("///                                                               ///\n");
     printf("///                                                               ///\n");
     printf("///                  Pressione <ESC> para voltar                  ///\n");
     printf("///                                                               ///\n");
