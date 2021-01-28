@@ -3,16 +3,18 @@
 void menuSobre(void);
 void menuPrincipal(void);
 void menuConfig(void);
+void menuConta(void);
 
 int main(void) {
 	menuPrincipal();
 	menuSobre();
 	menuConfig();
+	menuConta();
     return 0;
 
 }
 
-//esse vai ser o menu que vai aparecer quando o usuário clicar na opção "sobre nos" no menuPrincipal
+//menu sobre nos
 void menuSobre(void) {
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
@@ -32,7 +34,7 @@ void menuSobre(void) {
     printf("\n");
 }
 
-//menu principal terminado
+//menu principal
 void menuPrincipal(void) {
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
@@ -50,6 +52,7 @@ void menuPrincipal(void) {
     printf("\n");
 }
 
+//menu de configuracoes
 void menuConfig (void) {
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
@@ -60,6 +63,24 @@ void menuConfig (void) {
     printf("///                                                               ///\n");
     printf("///                       1 - Conta                               ///\n");
     printf("///                       2 - Resetar Dados                       ///\n");
+    printf("///                                                               ///\n");
+    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                                                               ///\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+}
+
+//menu da conta
+void menuConta (void) {
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                               ///\n");
+    printf("///                           ***********                         ///\n");
+    printf("///                           ** Conta **                         ///\n");
+    printf("///                           ***********                         ///\n");
+    printf("///                                                               ///\n");
+    printf("///                       1 - Criar Conta                         ///\n");
+    printf("///                       2 - Entrar em conta                     ///\n");
     printf("///                                                               ///\n");
     printf("///                  Pressione <ESC> para voltar                  ///\n");
     printf("///                                                               ///\n");
