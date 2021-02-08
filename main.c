@@ -5,12 +5,16 @@ void menuPrincipal(void);
 void menuConfig(void);
 void menuConta(void);
 void menuReset(void);
+void menuCriarConta(void);
+void menuEntrarConta(void);
 
 int main(void) {
 	menuPrincipal();
 	menuSobre();
 	menuConfig();
 	menuConta();
+	menuCriarConta();
+	menuEntrarConta();
 	menuReset();
     return 0;
 
@@ -89,6 +93,60 @@ void menuConta (void) {
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
 }
+
+//menu da criação da conta
+void menuCriarConta (void) {
+	
+	char contaNome[20];
+	char contaSenha[20];
+	
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                               ///\n");
+    printf("///                        *****************                      ///\n");
+    printf("///                        ** Criar Conta **                      ///\n");
+    printf("///                        *****************                      ///\n");
+    printf("///                                                               ///\n");
+    printf("///                        Digite seu nome (login):               ///\n");
+	scanf("%[A-Z a-z 0-9]", contaNome);
+	getchar();
+    printf("///                        Digite sua senha:                      ///\n");
+	scanf("%[A-Z a-z 0-9]", contaSenha);
+	getchar();
+    printf("///                                                               ///\n");
+    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                                                               ///\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+}
+
+void menuEntrarConta (void) {
+	
+	char contaNome[20];
+	char contaSenha[20];
+	
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                               ///\n");
+    printf("///                        ******************                     ///\n");
+    printf("///                        ** Entrar Conta **                     ///\n");
+    printf("///                        ******************                     ///\n");
+    printf("///                                                               ///\n");
+    printf("///                        Digite seu nome (login):               ///\n");
+	scanf("%[A-Z a-z 0-9]", contaNome);
+	getchar();
+    printf("///                        Digite sua senha:                      ///\n");
+	scanf("%[A-Z a-z 0-9]", contaSenha);
+	getchar();
+    printf("///                                                               ///\n");
+    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                                                               ///\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+}
+
+
+
 
 //menu de resetar os dados
 void menuReset (void) {
