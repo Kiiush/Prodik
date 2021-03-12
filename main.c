@@ -1,27 +1,69 @@
 #include <stdio.h>
+#include <time.h>
 
-void menuSobre(void);
-void menuPrincipal(void);
-void menuConfig(void);
-void menuConta(void);
-void menuReset(void);
-void menuCriarConta(void);
-void menuEntrarConta(void);
+int menuSobre(void);
+int menuPrincipal(void);
+int menuConfig(void);
+int menuConta(void);
+int menuReset(void);
+int menuCriarConta(void);
+int menuEntrarConta(void);
 
 int main(void) {
-	menuPrincipal();
-	menuSobre();
-	menuConfig();
-	menuConta();
-	menuCriarConta();
-	menuEntrarConta();
-	menuReset();
-    return 0;
+	int opcao, opcao2, opcao3, opcao4, opcao5, opcao0;
+	do{
+		opcao = menuPrincipal();
+		switch (opcao){
+			case 1:
+			printf("jogos ainda nao criados");
+			break;
+      case 2:
+      opcao2 = menuConfig();
+      switch (opcao2){
+        case 1:
+        opcao3 = menuConta();
+        switch (opcao3){
+          case 1:
+          menuCriarConta();
+          break;
+          case 2:
+          menuEntrarConta();
+          break;
+          case 0:
+          break;
+        }
+        case 2:
+        opcao5 = menuReset();
+        if (opcao5 == "S"){
+          printf("Conta resetada");
+        }else if (opcao5 == "N"){
+          printf("Conta nao resetada");
+        }else{
+          printf("Digite Sim ou Nao");
+        }
+        break;
 
+        case 0:
+        break;
+      }
+      break;
+      case 3:
+      opcao0 = menuSobre();
+      switch (opcao0){
+        case 0:
+        break;
+      }
+      break;
+		}
+	}while (opcao != 0);
+	return 0;
 }
 
+
+
 //menu sobre nos
-void menuSobre(void) {
+int menuSobre(void) {
+  int op0;
     printf("\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("///                                                                         ///\n");
@@ -34,14 +76,17 @@ void menuSobre(void) {
     printf("///  e desafios para treinar seus reflexos e habilidades de digitacao.      ///\n");
     printf("///  Seja para treinar ou apenas se divertir, Prodik podera te ajudar       ///\n");
     printf("///                                                                         ///\n");
-    printf("///                     Pressione <ESC> para voltar                         ///\n");
+    printf("///                          Pressione 0 para voltar                        ///\n");
+    scanf("%i", &op0);
+    getchar();
     printf("///                                                                         ///\n");
     printf("///////////////////////////////////////////////////////////////////////////////\n");
     printf("\n");
 }
 
 //menu principal
-void menuPrincipal(void) {
+int menuPrincipal(void) {
+	int op;
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("///                                                               ///\n");
@@ -53,13 +98,17 @@ void menuPrincipal(void) {
     printf("///                       2 - Configuracoes                       ///\n");
     printf("///                       3 - Sobre Nos                           ///\n");
     printf("///                       0 - Sair                                ///\n");
+	scanf("%i", &op);
+	getchar();
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+	return op;
 }
 
 //menu de configuracoes
-void menuConfig (void) {
+int menuConfig (void) {
+  int op2;
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("///                                                               ///\n");
@@ -70,14 +119,18 @@ void menuConfig (void) {
     printf("///                       1 - Conta                               ///\n");
     printf("///                       2 - Resetar Dados                       ///\n");
     printf("///                                                               ///\n");
-    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                    Pressione 0 para voltar                    ///\n");
+    scanf("%i", &op2);
+    getchar();
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+  return op2;
 }
 
 //menu da conta
-void menuConta (void) {
+int menuConta (void) {
+  int op3;
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("///                                                               ///\n");
@@ -88,17 +141,21 @@ void menuConta (void) {
     printf("///                       1 - Criar Conta                         ///\n");
     printf("///                       2 - Entrar em conta                     ///\n");
     printf("///                                                               ///\n");
-    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                     Pressione 0 para voltar                   ///\n");
+    scanf("%i", &op3);
+    getchar();
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+  return op3;
 }
 
 //menu da criação da conta
-void menuCriarConta (void) {
+int menuCriarConta (void) {
 	
 	char contaNome[20];
 	char contaSenha[20];
+  int op4;
 	
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
@@ -114,13 +171,16 @@ void menuCriarConta (void) {
 	scanf("%[A-Z a-z 0-9]", contaSenha);
 	getchar();
     printf("///                                                               ///\n");
-    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                    Pressione 0 para voltar                    ///\n");
+    scanf("%i", &op4);
+    getchar();
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+    return op4;
 }
 
-void menuEntrarConta (void) {
+int menuEntrarConta (void) {
 	
 	char contaNome[20];
 	char contaSenha[20];
@@ -139,22 +199,24 @@ void menuEntrarConta (void) {
 	scanf("%[A-Z a-z 0-9]", contaSenha);
 	getchar();
     printf("///                                                               ///\n");
-    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                    Pressione 0 para voltar                    ///\n");
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+  return 0;
 }
 
 
 
 
 //menu de resetar os dados
-void menuReset (void) {
+int menuReset (void) {
+  char op5;
     printf("\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("///                                                               ///\n");
     printf("///                      *******************                      ///\n");
-    printf("///                      ** Configuracoes **                      ///\n");
+    printf("///                      ** Resetar Conta **                      ///\n");
     printf("///                      *******************                      ///\n");
     printf("///                                                               ///\n");
     printf("///       Tem certeza que deseja resetar os dados da conta?       ///\n");
@@ -162,8 +224,11 @@ void menuReset (void) {
     printf("///                 (Sim)                   (Nao)                 ///\n");
     printf("///                                                               ///\n");
     printf("///                                                               ///\n");
-    printf("///                  Pressione <ESC> para voltar                  ///\n");
+    printf("///                    Pressione 0 para voltar                    ///\n");
+    scanf("%char", &op5);
+    getchar();
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
     printf("\n");
+  return 0;
 }
