@@ -8,9 +8,10 @@ int menuConta(void);
 int menuReset(void);
 int menuCriarConta(void);
 int menuEntrarConta(void);
+int menuPlacar(void);
 
 int main(void) {
-	int opcao, opcao2, opcao3, opcao4, opcao5, opcao0;
+	int opcao, opcao2, opcao3, opcao4, opcao5, opcao6, opcao0;
 	do{
 		opcao = menuPrincipal();
 		switch (opcao){
@@ -54,8 +55,12 @@ int main(void) {
         break;
       }
       break;
+
+      case 4:
+      menuPlacar;
+      break;
 		}
-	}while (opcao != 0);
+  }while (opcao != 0);
 	return 0;
 }
 
@@ -97,6 +102,7 @@ int menuPrincipal(void) {
     printf("///                       1 - Jogar                               ///\n");
     printf("///                       2 - Configuracoes                       ///\n");
     printf("///                       3 - Sobre Nos                           ///\n");
+    printf("///                       4 - Placares                            ///\n");    
     printf("///                       0 - Sair                                ///\n");
 	scanf("%i", &op);
 	getchar();
@@ -226,6 +232,43 @@ int menuReset (void) {
     printf("///                                                               ///\n");
     printf("///                    Pressione 0 para voltar                    ///\n");
     scanf("%char", &op5);
+    getchar();
+    printf("///                                                               ///\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("\n");
+  return 0;
+}
+
+//menu que mostra os placares (relatorios) (o quao rapido cada pessoa digitou)
+int menuPlacar (void) {
+  char op6;
+    printf("\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("///                                                               ///\n");
+    printf("///                          ************                         ///\n");
+    printf("///                          ** Placar **                         ///\n");
+    printf("///                          ************                         ///\n");
+    printf("///                                                               ///\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////        CayoDantas           |         19.3s             //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////        MatheusMed           |         24.5s             //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////        JoaoVictor           |         30.2s             //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////        EricMarley           |         32.1s             //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////                             |                           //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////                             |                           //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////                             |                           //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");
+    printf("//////                             |                           //////\n");
+    printf("/////////////////////////////////////////////////////////////////////\n");                            
+    printf("///                                                               ///\n");
+    printf("///                    Pressione 0 para voltar                    ///\n");
+    scanf("%char", &op6);
     getchar();
     printf("///                                                               ///\n");
     printf("/////////////////////////////////////////////////////////////////////\n");
